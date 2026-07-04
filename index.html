@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <header class="header">
+            <h1 class="title">CHRONO<span class="title-accent">SYNC</span></h1>
+            <p class="subtitle">Precision Timing System</p>
+        </header>
+
+        <div class="stopwatch-wrapper">
+            <div class="stopwatch-display">
+                <div class="display-content">
+                    <span class="time-display" id="timeDisplay">00:00.00</span>
+                    <div class="time-units">
+                        <span class="unit">MM:SS.MS</span>
+                    </div>
+                </div>
+                <div class="glow-ring"></div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-start" id="startBtn">
+                    <span class="btn-icon">▶</span>
+                    <span class="btn-text">START</span>
+                </button>
+                <button class="btn btn-pause" id="pauseBtn" disabled>
+                    <span class="btn-icon">⏸</span>
+                    <span class="btn-text">PAUSE</span>
+                </button>
+                <button class="btn btn-reset" id="resetBtn">
+                    <span class="btn-icon">↺</span>
+                    <span class="btn-text">RESET</span>
+                </button>
+                <button class="btn btn-lap" id="lapBtn">
+                    <span class="btn-icon">◉</span>
+                    <span class="btn-text">LAP</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="laps-container">
+            <div class="laps-header">
+                <h2>LAP HISTORY</h2>
+                <span class="lap-count" id="lapCount">0 laps</span>
+            </div>
+            <div class="laps-list" id="lapsList">
+                <div class="laps-empty">No laps recorded</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
